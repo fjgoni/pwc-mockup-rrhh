@@ -47,38 +47,47 @@
                     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                    
                   </table>
-                  <mat-paginator [pageSizeOptions]="[10]"
+                  <mat-paginator [pageSizeOptions]="[12]"
                         showFirstLastButtons 
                         aria-label="Select page of periodic elements">
                   </mat-paginator>
             </div>
             <div class="col-md-6">
              <div class="row">
-                <ngx-charts-bar-vertical
-                [view]="view"
-                [results]="single"
-                [gradient]="gradient"
-                [xAxis]="showXAxis"
-                [yAxis]="showYAxis"
-                [showXAxisLabel]="showXAxisLabel"
-                [showYAxisLabel]="showYAxisLabel"
-                [xAxisLabel]="xAxisLabel"
-                [yAxisLabel]="yAxisLabel"
-                (select)="onSelect($event)">
-              </ngx-charts-bar-vertical>
-                <ngx-charts-pie-chart #containerRef
-                (window:resize)="onResize($event)"
-                [view]="view"
-                [results]="single"
-                [gradient]="gradient"
-                [doughnut]="isDoughnut"
-                (select)="onSelect($event)"
-                (activate)="onActivate($event)"
-                (deactivate)="onDeactivate($event)"
-                >
-                </ngx-charts-pie-chart>
-                 
-            </div>
+              <div class="card">
+                  <div class="card-body text-center">
+                    <h4 class="card-title">Cursos faltantes</h4>
+                    <hr>
+                  </div>
+                  <ngx-charts-pie-chart #containerRef
+                  (window:resize)="onResize($event)"
+                  [view]="view"
+                  [results]="single"
+                  [gradient]="gradient"
+                  [doughnut]="isDoughnut"
+                  
+                  (select)="onSelect($event)"
+                  (activate)="onActivate($event)"
+                  (deactivate)="onDeactivate($event)"
+                  >
+                  </ngx-charts-pie-chart>                
+              </div>
+              <div class="card mt-2">
+                  <ngx-charts-bar-vertical
+                  [view]="view"
+                  [results]="single"
+                  [gradient]="gradient"
+                  [xAxis]="showXAxis"
+                  [yAxis]="showYAxis"
+                  [showXAxisLabel]="showXAxisLabel"
+                  [showYAxisLabel]="showYAxisLabel"
+                  [xAxisLabel]="xAxisLabel"
+                  [yAxisLabel]="yAxisLabel"
+                  (select)="onSelect($event)">
+                </ngx-charts-bar-vertical>
+              </div>
+            </div> 
+          </div>
           
         </div>
         

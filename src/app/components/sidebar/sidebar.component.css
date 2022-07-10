@@ -9,3 +9,7 @@ li{
 i{
     color: rgb(161, 115, 168);
 }
+
+.card hr {
+    width: 100% !important;
+}
