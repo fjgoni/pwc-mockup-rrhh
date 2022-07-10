@@ -29,6 +29,14 @@ export class MenuprincipalComponent implements OnInit {
   };
   view: [number, number] = [700, 400];
   single: any;
+
+  //Bar chart
+  showXAxis = true;
+  showYAxis = true;
+  showXAxisLabel = true;
+  xAxisLabel = 'Cursos faltantes';
+  showYAxisLabel = true;
+  yAxisLabel = 'Cantidad personas';
   // options
   gradient: boolean = true;
   showLegend: boolean = true;
@@ -47,7 +55,7 @@ export class MenuprincipalComponent implements OnInit {
     console.log(innerWidth)
     if(innerWidth > 500)
     {
-      this.view = [innerWidth / 3, 400];
+      this.view = [innerWidth / 3, 300];
     }else{
       this.view = [innerWidth / 1.4, 300];
     }
@@ -95,10 +103,9 @@ export class MenuprincipalComponent implements OnInit {
     }
     else
     {
-      this.view = [event.target.innerWidth / 3, 400];
+      this.view = [event.target.innerWidth / 3, 300];
     }
 }
-
 
 }
  
