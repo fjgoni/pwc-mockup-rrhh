@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+body{
+    background-color: rgba(235, 235, 235, 0.425) !important;
+}
+
+
+.bg-custom
+{
+    background-color: rgba(230, 216, 216, 0.493);
+}
+
+.bg-custom2
+{
+    background-color: rgba(243, 251, 252, 0.842);
+
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
